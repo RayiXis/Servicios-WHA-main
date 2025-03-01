@@ -1,0 +1,46 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Gateway</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>WhatsApp Gateway</h1>
+    <div id="qr"></div>
+    <div id="messages"></div>
+
+    <script>
+        const socket = io();
+
+        // Recibir el QR y mostrarlo en la página
+        socket.on("qr", (qr) => {
+            const qrDiv = document.getElementById("qr");
+            qrDiv.innerHTML = "<p>Escanea este código QR:</p>";
+
+            // Generar la imagen del QR usando la librería qrcode
+            QRCode.toDataURL(qr, (err, url) => {
+                if (err) {
+                    console.error("Error al generar el QR:", err);
+                    return;
+                }
+                qrDiv.innerHTML += `<img src="${url}" alt="QR Code">`;
+            });
+        });
+
+        // Recibir mensajes y mostrarlos en la página
+        socket.on("message", (message) => {
+            const messagesDiv = document.getElementById("messages");
+            messagesDiv.innerHTML += `
+                <p><strong>De:</strong> ${message.from}</p>
+                <p><strong>Mensaje:</strong> ${message.body}</p>
+                <p><strong>Fecha:</strong> ${message.timestamp}</p>
+                <hr>
+            `;
+        });
+    </script>
+</body>
+</html>

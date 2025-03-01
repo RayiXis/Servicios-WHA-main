@@ -1,0 +1,15 @@
+2025/02/07-00:24:24.229 2cbc Reusing MANIFEST C:\Users\pc gamer\Desktop\Servicios-WHA\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/02/07-00:24:24.230 2cbc Recovering log #165
+2025/02/07-00:24:24.447 2cbc Reusing old log C:\Users\pc gamer\Desktop\Servicios-WHA\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000165.log 
+2025/02/07-00:24:26.262 2cbc Level-0 table #171: started
+2025/02/07-00:24:26.296 2cbc Level-0 table #171: 798080 bytes OK
+2025/02/07-00:24:26.298 2cbc Delete type=0 #165
+2025/02/07-00:24:26.299 2cbc Manual compaction at level-0 from '\x001\x00\x00\x00' @ 72057594037927935 : 1 .. '\x002\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/02/07-00:24:29.056 2d9c Compacting 1@1 + 2@2 files
+2025/02/07-00:24:29.178 2d9c Generated table #172@1: 35577 keys, 2195679 bytes
+2025/02/07-00:24:29.281 2d9c Generated table #173@1: 39284 keys, 1814436 bytes
+2025/02/07-00:24:29.282 2d9c Compacted 1@1 + 2@2 files => 4010115 bytes
+2025/02/07-00:24:29.282 2d9c compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/02/07-00:24:29.283 2d9c Delete type=2 #167
+2025/02/07-00:24:29.283 2d9c Delete type=2 #168
+2025/02/07-00:24:29.283 2d9c Delete type=2 #171
